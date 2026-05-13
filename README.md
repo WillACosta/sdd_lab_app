@@ -4,6 +4,8 @@ A minimal personal read-it-later app. Paste a URL, the backend fetches the page 
 
 No accounts, no sync, no editing — see [`spec.md`](spec.md) for the full requirements.
 
+![Showcase App Image](./docs/showcase.png)
+
 ## Stack
 
 - **Frontend** — Streamlit
@@ -11,31 +13,16 @@ No accounts, no sync, no editing — see [`spec.md`](spec.md) for the full requi
 - **Metadata** — `requests` + BeautifulSoup
 - **Storage** — TinyDB (single JSON file at `backend/data/items.json`)
 
-## Setup
+## Setup & Run
 
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -e ".[dev]"
-```
+Its recommended to use `Make` to simplify the setup and running process:
 
-## Run
+> Execute the following command at root directory
 
-Open two terminals from the project root:
-
-```bash
-# Terminal 1 — backend on http://localhost:8000
-.venv/bin/uvicorn backend.main:app --reload
-```
-
-```bash
-# Terminal 2 — frontend on http://localhost:8501
-.venv/bin/streamlit run frontend/app.py
+```shell
+make run
 ```
 
 The frontend reads `BACKEND_URL` (default `http://localhost:8000`) and the backend reads `DB_PATH` (default `backend/data/items.json`).
 
-## Test
-
-```bash
-.venv/bin/pytest
-```
+> Find more details in the `Makefile`
