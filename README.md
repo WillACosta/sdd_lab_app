@@ -1,6 +1,6 @@
 # ReadLater
 
-A minimal personal read-it-later app. Paste a URL, the backend fetches the page and extracts Open Graph / Twitter Card / standard `<meta>` tags, and the result is stored in a local JSON file. A second page lists everything saved so far.
+A minimal personal read-it-later app. Paste a URL, and the backend fetches the page to extract Open Graph, Twitter Card, and standard `<meta>` tags. The results are then stored in a local JSON file. A second page lists everything saved so far.
 
 No accounts, no sync, no editing — see [`spec.md`](spec.md) for the full requirements.
 
@@ -15,9 +15,9 @@ No accounts, no sync, no editing — see [`spec.md`](spec.md) for the full requi
 
 ## Setup & Run
 
-Its recommended to use `Make` to simplify the setup and running process:
+It's recommended to use `make` to simplify the setup and execution process:
 
-> Execute the following command at root directory
+> Execute the following command in the root directory:
 
 ```shell
 make run
